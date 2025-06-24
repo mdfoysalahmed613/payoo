@@ -24,7 +24,7 @@ function addTransaction(heading){
     <div id="trxid" class="">
     <div class="my-3 p-4 rounded-2xl bg-white flex gap-3">
     <div class="bg-gray-200 p-3 rounded-[50%]">
-    <img src="../assets/addmoney.png" alt="">
+    <img src="assets/addmoney.png" alt="">
     </div>
     <div>
       <h3 class="font-semibold text-gray-600 text-lg">${heading}</h3>
