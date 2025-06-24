@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page</title>
+  <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-slate-800 font-outfit">
+  <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <div class="w-full flex justify-center relative mt-28 ">
+      <img src="../assets/bg.png" alt="" class=" ">
+      <img src="../assets/Group.png" alt="" class=" object-contain absolute top-10">
+    </div>
+    <div class="mx-7 bg-white rounded-4xl overflow-hidden">
+      <div class="p-7">
+        <form action="">
+          <label for="number" class="font-semibold block my-2">Mobile Number</label>
+          <input type="tel" name="number" placeholder="Enter your number" class="number py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required>
+
+          <label for="pin" class="font-semibold py-2 block mt-3">4 Digit Pin</label>
+          <input type="password" placeholder="Enter 4 Digit Pin" name="pin" class="pin py-3 block border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required >
+
+          <a href="#" class="mt-3 inline-block hover:text-blue-400 " id="forgotPin">Forgot PIN?</a>
+
+          <input type="submit" id="login" value="Login" class="rounded-4xl bg-blue-500 text-white font-bold block w-full mt-5 py-3">
+          
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+  
+  <script src="./script/login.js"></script>
+</body>
+</html>

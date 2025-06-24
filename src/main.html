@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-slate-800 font-outfit">
+<section class="max-w-md min-h-screen mx-auto bg-gray-200">
+<header class="bg-white overflow-x-hidden">
+  <nav class="p-4 flex justify-between items-center border-b border-b-gray-200">
+    <div class="flex gap-2">
+      <img src="../assets/Group.png" alt="">
+      <div>
+        <h1 class="font-extrabold text-2xl pt-2 pb-1">৳ <span id="mainBalance">500</span></h1>
+        <p class="text-gray-500">Available Balance</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 border h-fit px-2 py-1 rounded-lg border-gray-400">
+      <img src="../assets/logout.png" alt="" class="w-4 h-4">
+      <button class="text-gray-500" id="logout">Log Out</button>
+    </div>
+  </nav>
+  <div class="p-4">
+    <h1 class="text-2xl font-bold py-3">🔥 Welcome to Payooo!</h1>
+    <p class="text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+    <div class="grid grid-cols-3 gap-4 py-4">
+      <div class="border border-gray-200 rounded-2xl inline-block hover:bg-blue-50  hover:border-blue-600 group" id="addMoneyHero">
+        <div class="flex flex-col items-center justify-center h-full gap-2">
+        <img src="../assets/addmoney.png" alt="" >
+        <span class="text-gray-600 group-hover:text-blue-500 group-hover:font-semibold">Add Money</span>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-2xl inline-block py-6 px-7 hover:bg-blue-50  hover:border-blue-600 group" id="cashOutHero">
+        <div class="flex flex-col items-center justify-center h-full gap-2">
+        <img src="../assets/send1.png" alt="" >
+        <span class="text-gray-600 group-hover:text-blue-500 group-hover:font-semibold">CashOut</span>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-2xl inline-block hover:bg-blue-50  hover:border-blue-600 group" id="transferMoneyHero">
+        <div class="flex flex-col items-center justify-center h-full gap-2">
+        <img src="../assets/money1.png" alt="" >
+        <span class="text-gray-600 group-hover:text-blue-500 group-hover:font-semibold text-center">Transfer Money</span>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-2xl inline-block hover:bg-blue-50  hover:border-blue-600 group" id="getBonusHero">
+        <div class="flex flex-col items-center justify-center h-full gap-2">
+        <img src="../assets/bonus1.png" alt="" >
+        <span class="text-gray-600 group-hover:text-blue-500 group-hover:font-semibold">Get Bonus</span>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-2xl inline-block hover:bg-blue-50  hover:border-blue-600 group" id="payBillHero">
+        <div class="flex flex-col items-center justify-center h-full gap-2">
+        <img src="../assets/purse1.png" alt="" >
+        <span class="text-gray-600 group-hover:text-blue-500 group-hover:font-semibold">Pay Bill</span>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-2xl py-6 px-7 inline-block hover:bg-blue-50  hover:border-blue-600 group" id="transactionsHero">
+        <div class="flex flex-col items-center justify-center h-full gap-2">
+        <img src="../assets/trans.png" alt="" >
+        <span class="text-gray-600 group-hover:text-blue-500 group-hover:font-semibold">Transactions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="addMoneySection" class="m-4">
+  <h2 class="font-semibold text-2xl my-5 mt-8 ml-3">Add Money</h2>
+  <div class="bg-white rounded-4xl p-7 my-3">
+    <form action="" class="">
+      <label for="bank" class="block py-2">Select  Payment Method</label>
+      <select name="bank" class="py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500 text-gray-500 appearance-none" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="Bkash">Bkash</option>
+        <option value="Nagod">Nagod</option>
+        <option value="Rocket">Rocket</option>
+        <option value="Upay">Upay</option>
+      </select>
+      
+      <label for="accountNumber" class="block mt-3 py-2">Account Number</label>
+      <input type="tel" name="number" placeholder="Enter your number" class="number py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required >
+
+      <label for="amount" class="block py-2 mt-3" >Amount to Add</label>
+      <input type="number" id="addMoneyAmount" name="number" placeholder="Enter amount" class="py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" min="0" max="10000" required>
+
+      <label for="pin" class="py-2 block mt-2">PIN Number</label>
+      <input type="password" placeholder="Enter 4 Digit Pin Number" name="pin" class="pin py-3 block border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required>
+
+      <input type="submit" id="addMoneyBtn" value="Add Money" class="rounded-4xl bg-blue-500 text-white font-bold block w-full mt-5 py-3">
+    </form>
+  </div>
+</div>
+<div id="cashOutSection" class="m-4 hidden">
+  <h2 class="font-semibold text-2xl my-5 mt-8 ml-3">Cash Out</h2>
+  <div class="bg-white rounded-4xl p-7 my-3">
+    <form action="" class="">
+      
+      <label for="accountNumber" class="block py-2">Agent Number</label>
+      <input type="tel" name="number" placeholder="Enter your number" class="number py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required >
+
+      <label for="amount" class="block py-2 mt-3">Amount to Withdraw</label>
+      <input type="number" id="withdrawAmount" name="number" placeholder="Enter Amount to Withdraw" class="py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" min="0" required>
+
+      <label for="pin" class="py-2 block mt-2">PIN Number</label>
+      <input type="password" placeholder="Enter 4 Digit Pin Number" name="pin" class="pin py-3 block border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required>
+
+      <input type="submit" id="cashOutBtn" value="Withdraw Money" class="rounded-4xl bg-blue-500 text-white font-bold block w-full mt-5 py-3">
+    </form>
+  </div>
+</div>
+<div id="transferMoneySection" class="m-4 hidden">
+  <h2 class="font-semibold text-2xl my-5 mt-8 ml-3">Transfer Money</h2>
+  <div class="bg-white rounded-4xl p-7 my-3">
+    <form action="" class="">
+      
+      <label for="accountNumber" class="block py-2">User Account Number</label>
+      <input type="tel" name="number" placeholder="Enter your number" class="number py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required >
+
+      <label for="amount" class="block py-2 mt-3">Amount </label>
+      <input type="number" name="number" id="transferAmount" placeholder="Enter Amount to Transfer" class="py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" min="0" required>
+
+      <label for="pin" class="py-2 block mt-2">PIN Number</label>
+      <input type="password" placeholder="Enter 4 Digit Pin Number" name="pin" class="pin py-3 block border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required>
+
+      <input type="submit" id="transactionsBtn" value="Transfer Money" class="rounded-4xl bg-blue-500 text-white font-bold block w-full mt-5 py-3">
+    </form>
+  </div>
+</div>
+<div id="getBonusSection" class="m-4 hidden">
+  <h2 class="font-semibold text-2xl my-5 mt-8 ml-3">Get Bonus</h2>
+  <div class="bg-white rounded-4xl p-7 my-3">
+    <form action="" class="">
+
+      <label for="amount" class="block py-2 ">Enter Bonus Coupon </label>
+      <input type="text" name="number" id="coupon" placeholder="Enter your Coupon" class="py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" min="0" required>
+
+      <input type="submit" id="getBonusBtn" value="Get Bonus" class="rounded-4xl bg-blue-500 text-white font-bold block w-full mt-5 py-3">
+    </form>
+  </div>
+</div>
+<div id="payBillSection" class="m-4 hidden">
+  <h2 class="font-semibold text-2xl my-5 mt-8 ml-3">Pay Bill</h2>
+  <div class="bg-white rounded-4xl p-7 my-3">
+    <form action="" class="">
+      <label for="bank" class="block py-2">Select To Pay</label>
+      <select name="bank"  class="py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500 text-gray-500 appearance-none" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="Bkash">Gas Bill</option>
+        <option value="Nagod">Electricity Bill</option>
+        <option value="Rocket">Wifi Bill</option>
+        <option value="Upay">Mobile Recharge</option>
+      </select>
+      
+      <label for="accountNumber" class="block mt-3 py-2">Biller Account Number</label>
+      <input type="tel" name="accountNumber" placeholder="Enter your number" class="number py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required >
+
+      <label for="amount" class="block py-2 mt-3">Amount to Pay</label>
+      <input type="number" id="payAmount" name="number" placeholder="Enter amount" class="py-3 border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" min="0" required>
+
+      <label for="pin" class="py-2 block mt-2">PIN Number</label>
+      <input type="password" placeholder="Enter 4 Digit Pin Number" name="pin" class="pin py-3 block border border-gray-100 bg-gray-100 rounded-4xl px-4 w-full focus:outline-none focus:border-gray-500" required>
+
+      <input type="submit" id="payBillBtn" value="Pay Now" class="rounded-4xl bg-blue-500 text-white font-bold block w-full mt-5 py-3">
+    </form>
+  </div>
+</div>
+<div id="transactionsSection" class="m-4 hidden">
+  <h2 class="font-semibold text-2xl my-5 mt-8 ml-3">Latest Payments</h2>
+
+  <!-- <div class="my-3 p-4 rounded-2xl bg-white flex gap-3">
+    <div class="bg-gray-200 p-3 rounded-[50%]">
+    <img src="../assets/addmoney.png" alt="">
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-600 text-lg">Electricity Bill</h3>
+      <p class="text-sm">Today 01:44 AM</p>
+    </div>
+  </div> -->
+
+  
+  
+</div>
+</section>
+<script src="./script/login.js"></script>
+<script src="./script/main.js"></script>
+</body>
+</html>
